@@ -12,9 +12,11 @@
 <template>
   
   <header>
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center mb-3">
       <!-- LOGO -->
-      <img src="/images/white-logo-2.png" alt="">
+      <a href="#">
+        <img src="/images/white-logo-2.png" alt="">
+      </a>
   
       <!-- NAV -->
       <nav>
@@ -31,10 +33,40 @@
     
     </div>
     
-    <div class="container">
-      <div class="jumbotron">
-        JUMBOTRON
+    <div class="container jumbotron">
+      
+      <!-- JUMBOTRON SX -->
+      <div class="row">
+
+        <div class="col-md-5 d-flex align-items-center">
+          <div class="wrapper">
+
+            <h1 class="text-start fw-bold">
+              Business Planning <br>
+              <span class="fw-normal">
+                Digital Technology
+              </span><br>
+              Modern Solution!
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sit rem laudantium necessitatibus facilis officia accusantium at.</p>
+
+            <a href="#" class="btn btn-primary me-3">Try it Now</a>
+            <a href="#" class="btn btn-primary">Explore More</a>
+
+          </div>
+        </div>
+
+        <!-- JUMBOTRON DX -->
+        <div class="col-md-7">
+          
+          <!-- HERO IMAGE -->
+          <div class="text-center">
+            <img src="/images/header.png" alt="">
+          </div>
+          
+        </div>
       </div>
+
     </div>
   </header>
 
@@ -49,10 +81,30 @@
   header {
     padding: $small-size 0;
     background-color: rgb(99, 128, 206);
+    color: white;
+    @include bluegradient;
 
     nav li {
       margin: 0 $xsmall-size;
     }
+
+    .jumbotron {
+
+      padding-bottom: $xlarge-size;
+      .wrapper {
+        width: 350px;
+      }
+
+      img {
+        height: 440px;
+      }
+    }
+
+  }
+
+  .debug {
+    border-left: 2px solid green;
+    border-right: 2px solid green;
   }
 
 

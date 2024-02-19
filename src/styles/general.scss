@@ -3,7 +3,7 @@
 @use './partials/_mixins.scss' as *;
 
 // Import all of Bootstrap's CSS
-@import "bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
 
 // RESET
 
@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 
 ul {
   padding-left: 0;
@@ -36,6 +37,9 @@ a:hover {
   --bs-btn-padding-x: 1.2rem;
 }
 
+p {
+  font-size: 0.9rem;
+}
 
 // UTILS PROPS
 
@@ -43,7 +47,3 @@ section:nth-of-type(even) {
   @include bluegradient
 }
 
-.container {
-  border-left: 2px solid red;
-  border-right: 2px solid red;
-}
