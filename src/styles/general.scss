@@ -1,0 +1,14 @@
+@use './partials/_variables.scss' as *;
+@use './partials/_mixins.scss' as *;
+@use './partials/_mixins.scss' as *;
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// RESET
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

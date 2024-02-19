@@ -12,15 +12,21 @@
 <template>
 
   <header>
-    HEADER
+
+    <div class="container">
+      HEADER
+    </div>
+  
   </header>
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+  @use '../styles/partials/_variables.scss' as *;
 
-header {
-  background-color: rgb(99, 128, 206);
-}
+
+  header {
+    background-color: rgb(99, 128, 206);
+  }
 
 </style>

@@ -24,6 +24,8 @@
 
 </template>
 
-<style scoped>
-
+<style lang="scss">
+  @use './styles/general.scss';
+  @use './styles/partials/_variables.scss';
 </style>
+

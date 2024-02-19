@@ -12,15 +12,18 @@
 <template>
 
   <footer>
-    FOOTER
+    <div class="container">
+      FOOTER
+    </div>
   </footer>
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+  @use '../styles/partials/_variables.scss' as *;
 
-footer {
-  background-color: rgb(172, 172, 212);
-}
+  footer {
+    background-color: rgb(172, 172, 212);
+  }
 
 </style>

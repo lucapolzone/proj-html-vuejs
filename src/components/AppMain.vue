@@ -10,17 +10,21 @@
   };
 </script>
 <template>
+<main>
 
-  <div>
+  <div class="container">
     MAIN
   </div>
 
+</main>
+
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+  @use '../styles/partials/_variables.scss' as *;
 
-div {
-  background-color: rgb(158, 135, 135);
-}
+  main {
+    background-color: rgb(158, 135, 135);
+  }
 
 </style>
