@@ -13,11 +13,37 @@
   box-sizing: border-box;
 }
 
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F9636B;
+}  
+
+.btn {
+  border-radius: 25px;
+  --bs-btn-padding-x: 1.2rem;
+}
 
 
 // UTILS PROPS
 
 section:nth-of-type(even) {
-  background-image: linear-gradient(to bottom, #0a1852 0, #01002f 100%);
-  color: white;
+  @include bluegradient
+}
+
+.container {
+  border-left: 2px solid red;
+  border-right: 2px solid red;
 }

@@ -1,0 +1,4 @@
+@mixin bluegradient {
+  background-image: linear-gradient(to bottom, #0a1852 0, #01002f 100%);
+  color: white;
+}
