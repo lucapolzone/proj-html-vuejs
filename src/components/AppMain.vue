@@ -1,49 +1,46 @@
 <script>
-  
-  export default {
-    data() {
-      return {
 
-      }
-    },
+export default {
+  data() {
+    return {
 
-  };
+    }
+  },
+
+};
 </script>
 <template>
-<main>
-  <div class="container text-center">
+  <main>
+    <div class="container text-center">
       MAIN
-  </div>
-
-  <section>
-    <div class="container">
-      SEZIONE BIANCA
     </div>
-  </section>
 
-  <section id="blu">
-    <div class="container">
-      SEZIONE BLU
-    </div>
-  </section>
+    <section>
+      <div class="container">
+        SEZIONE BIANCA
+      </div>
+    </section>
+
+    <section id="blu">
+      <div class="container">
+        SEZIONE BLU
+      </div>
+    </section>
 
 
-</main>
-
+  </main>
 </template>
 
 <style lang="scss" scoped>
-  @use '../styles/partials/_variables.scss' as *;
+@use '../styles/partials/_variables.scss' as *;
 
-  main {
-  
-  
-    section {
-      padding: 7rem 0;
-    }
+main {
 
 
+  section {
+    padding: 7rem 0;
   }
 
 
+}
 </style>

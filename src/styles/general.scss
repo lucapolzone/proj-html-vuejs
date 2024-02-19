@@ -30,11 +30,20 @@ a {
 
 a:hover {
   color: #F9636B;
-}  
+}
 
 .btn {
   border-radius: 25px;
   --bs-btn-padding-x: 1.2rem;
+
+  &.btn-primary {
+    background-image: linear-gradient(to right, #03A7D3E6 0, #1d3e82 100%);
+    border: 0;
+  }
+
+  &.btn-danger {
+    background-image: linear-gradient(to right, #B6246E 0, #F9636B 100%);
+  }
 }
 
 p {
@@ -47,3 +56,17 @@ section:nth-of-type(even) {
   @include bluegradient
 }
 
+
+//MEDIA QUERY
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1180px;
+  }
+}
