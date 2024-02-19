@@ -11,10 +11,22 @@
 </script>
 <template>
 <main>
-
-  <div class="container">
-    MAIN
+  <div class="container text-center">
+      MAIN
   </div>
+
+  <section>
+    <div class="container">
+      SEZIONE BIANCA
+    </div>
+  </section>
+
+  <section id="blu">
+    <div class="container">
+      SEZIONE BLU
+    </div>
+  </section>
+
 
 </main>
 
@@ -24,7 +36,14 @@
   @use '../styles/partials/_variables.scss' as *;
 
   main {
-    background-color: rgb(158, 135, 135);
+  
+  
+    section {
+      padding: 7rem 0;
+    }
+
+
   }
+
 
 </style>
