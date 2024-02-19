@@ -1,4 +1,13 @@
+@use '_variables.scss' as *;
+
+
 @mixin bluegradient {
   background-image: linear-gradient(to bottom, #0a1852 0, #01002f 100%);
   color: white;
+}
+
+
+@mixin caption {
+  margin: $medium-size 0;
+  color: #03A7D3E6;
 }

@@ -103,21 +103,18 @@ header {
   }
 
   .jumbotron {
-
     padding-bottom: $xxlarge-size;
 
     .wrapper {
       width: 350px;
 
       .caption {
-        margin: $medium-size 0;
-        color: #03A7D3E6;
+        @include caption
       }
     }
 
     img {
       max-width: 600px;
-      width: 100%;
     }
   }
 
