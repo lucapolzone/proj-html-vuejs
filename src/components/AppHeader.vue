@@ -15,7 +15,7 @@ export default {
       <nav class="d-flex justify-content-between align-items-center mb-4">
         <!-- LOGO -->
         <a href="#">
-          <img :src="navElements.src" alt="">
+          <img :src="navElements.src" alt="img-logo">
         </a>
 
         <ul class="d-flex align-items-center">
@@ -83,8 +83,23 @@ header {
   color: white;
   @include bluegradient;
 
-  nav li {
-    margin: 0 $small-size;
+  nav {
+
+    ul {
+      max-width: 620px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+
+      li {
+        margin: 0 $xxsmall-size;
+
+        .btn {
+          min-width: 90px;
+        }
+      }
+    }
   }
 
   .jumbotron {

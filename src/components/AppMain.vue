@@ -38,7 +38,7 @@ main {
 
 
   section {
-    padding: 7rem 0;
+    padding: 2rem 0;
   }
 
 
