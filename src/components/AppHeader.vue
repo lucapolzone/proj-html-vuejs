@@ -1,33 +1,31 @@
 <script>
 
 export default {
-  data() {
-    return {
-
-    }
+  props: {
+    navElements: Object,
   },
 
 };
 </script>
 <template>
   <header>
-    <div class="container d-flex justify-content-between align-items-center mb-4">
-      <!-- LOGO -->
-      <a href="#">
-        <img src="/images/white-logo-2.png" alt="">
-      </a>
-
+    <div class="container">
 
       <!-- NAV -->
-      <nav>
+      <nav class="d-flex justify-content-between align-items-center mb-4">
+        <!-- LOGO -->
+        <a href="#">
+          <img :src="navElements.src" alt="">
+        </a>
+
         <ul class="d-flex align-items-center">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#" class="btn btn-primary">Sign in</a></li>
+          <li><a href="#">{{ navElements.home }}</a></li>
+          <li><a href="#">{{ navElements.about }}</a></li>
+          <li><a href="#">{{ navElements.services }}</a></li>
+          <li><a href="#">{{ navElements.blog }}</a></li>
+          <li><a href="#">{{ navElements.contact }}</a></li>
+          <li><a href="#">{{ navElements.portfolio }}</a></li>
+          <li><a href="#" class="btn btn-primary">{{ navElements.sign }}</a></li>
         </ul>
       </nav>
 
@@ -48,7 +46,8 @@ export default {
               </span><br>
               Modern Solution!
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sit rem laudantium necessitatibus
+            <p class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sit rem laudantium
+              necessitatibus
               facilis officia accusantium at.</p>
 
             <a href="#" class="btn btn-danger me-3">Try it Now</a>
@@ -94,6 +93,11 @@ header {
 
     .wrapper {
       width: 350px;
+
+      .caption {
+        margin: $medium-size 0;
+        color: #03A7D3E6;
+      }
     }
 
     img {
@@ -102,10 +106,5 @@ header {
     }
   }
 
-}
-
-.debug {
-  border-left: 2px solid green;
-  border-right: 2px solid green;
 }
 </style>
