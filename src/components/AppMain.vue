@@ -12,13 +12,48 @@ export default {
 <template>
   <main>
 
-    <section>
-      <div class="container">
-        SEZIONE BIANCA
+    <section id="our-services">
+      <div class="container text-center">
+
+        <div class="wrapper-title">
+          <small>Our Services</small>
+          <h2 class="fw-bold">What We Do</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="row text-center">
+
+          <div class="col-md-3">
+            <div class="card">
+              <p>CARD</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <p>CARD</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <p>CARD</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <p>CARD</p>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="#" class="btn btn-danger me-3">View All Services</a>
       </div>
     </section>
 
-    <section>
+    <section id="start-your-project">
       <div class="container">
 
         <!-- SX -->
@@ -39,12 +74,12 @@ export default {
             <div class="wrapper">
 
               <small>Start Your Project</small>
-              <h1 class="text-start fw-bold mt-4">
+              <h2 class="text-start fw-bold mt-4">
                 Grow Your Business <br>
                 <span class="fw-normal">
                   With Our Strategy
                 </span>
-              </h1>
+              </h2>
               <p class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sit rem laudantium
                 necessitatibus
                 facilis officia accusantium at.</p>
@@ -72,32 +107,47 @@ export default {
 
 main {
 
-
   section {
     padding: $large-size 0;
   }
 
+  .wrapper-title {
+    text-align: center;
 
-}
-
-.men-data {
-  max-width: 400px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.nemoodar {
-  max-width: 500px;
-  margin-bottom: 5rem;
-}
-
-
-.wrapper {
-  width: 400px;
-
-  .caption {
-    @include caption
+    small {
+      color: #F9636B;
+    }
   }
+
+  section#our-services {
+    //
+  }
+
+  section#start-your-project {
+
+    .men-data {
+      max-width: 400px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    .nemoodar {
+      max-width: 500px;
+      margin-bottom: 5rem;
+    }
+
+
+    .wrapper {
+      width: 400px;
+
+      .caption {
+        @include caption
+      }
+    }
+
+  }
+
+
 }
 </style>

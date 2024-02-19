@@ -3,7 +3,7 @@
 @use './partials/_mixins.scss' as *;
 
 // Import all of Bootstrap's CSS
-// @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 // RESET
 
@@ -15,6 +15,10 @@
 
 img {
   width: 100%;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 ul {
