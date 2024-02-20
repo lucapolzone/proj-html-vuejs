@@ -5,7 +5,8 @@ import AppCard from './AppCard.vue';
 export default {
   data() {
     return {
-      carousel: [
+      index: 0,
+      slides: [
         {
           imgPath: '/images/84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg',
           badge1: 'Mock-up',
@@ -25,10 +26,20 @@ export default {
           imgPath: '/images/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
           badge1: 'Satisfy Poster',
           badge2: 'Branding Strategy'
+        },
+        {
+          imgPath: '/images/studio-republic-644339-unsplash-1380x703.jpg',
+          badge1: 'Office Poster',
+          badge2: 'Team Work'
         }
       ]
 
     }
+  },
+
+  methods: {
+    
+
   },
 
   props: {
@@ -50,6 +61,8 @@ export default {
           <small>Our Services</small>
           <h2>What We Do</h2>
           <p>When, while the lovely valley teems with vapour around meand the</p>
+
+
         </div>
 
         <div class="row text-center">
@@ -110,9 +123,17 @@ export default {
     <section id="portfolio">
       <div class="container">
 
-        <div class="wrapper-title">
-          <small>Portfolio</small>
-          <h2>latest <span class="fw-normal">work</span></h2>
+        <div class="wrapper-top-content d-flex justify-content-between align-items-end">
+          <div>
+            <small>Portfolio</small>
+            <h2>latest <span class="fw-normal">work</span></h2>
+          </div>
+
+          <div class="carousel-arrows">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+
         </div>
 
         <!-- ==== CAROUSEL ==== -->
@@ -120,77 +141,29 @@ export default {
         <div class="container carousel">
           <div class="row">
 
-            <div class="col-md-3">
+            <div v-for="slide in slides" class="col">
               <div class="card ms-card">
                 <div class="overlay-img-card">
-                  <img :src="carousel[0].imgPath" alt="">
+                  <img :src="slide.imgPath" alt="">
                 </div>
                 <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    {{ carousel[0].badge1 }}
+                    {{ slide.badge1 }}
                   </small>
                   <small>
-                    {{ carousel[0].badge2 }}
+                    {{ slide.badge2 }}
                   </small>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-3">
-              <div class="card ms-card">
-                <div class="overlay-img-card">
-                  <img :src="carousel[1].imgPath" alt="">
-                </div>
-                <div class="badge-card d-flex align-items-center justify-content-around py-2">
-                  <small class="fw-bold">
-                    {{ carousel[1].badge1 }}
-                  </small>
-                  <small>
-                    {{ carousel[1].badge2 }}
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card ms-card">
-                <div class="overlay-img-card">
-                  <img :src="carousel[2].imgPath" alt="">
-                </div>
-                <div class="badge-card d-flex align-items-center justify-content-around py-2">
-                  <small class="fw-bold">
-                    {{ carousel[2].badge1 }}
-                  </small>
-                  <small>
-                    {{ carousel[2].badge2 }}
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card ms-card">
-                <div class="overlay-img-card">
-                  <img :src="carousel[3].imgPath" alt="">
-                </div>
-                <div class="badge-card d-flex align-items-center justify-content-around py-2">
-                  <small class="fw-bold">
-                    {{ carousel[3].badge1 }}
-                  </small>
-                  <small>
-                    {{ carousel[3].badge2 }}
-                  </small>
-                </div>
-              </div>
-            </div>
-
 
 
           </div>
 
           <div class="text-center">
-            <i class="fa-solid fa-circle active"></i>
             <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle active"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
           </div>
@@ -251,6 +224,20 @@ main {
 
 
   section#portfolio {
+
+    .carousel-arrows {
+      color: #F9636B;
+
+      .fa-solid {
+        font-size: $medium-size;
+      }
+      .fa-solid.fa-circle-arrow-left {
+        margin-right: 1rem;
+      }
+
+    }
+
+ 
     .carousel {
       // overflow-x: auto;
       border: 2px solid red;
@@ -258,13 +245,17 @@ main {
       .ms-card {
         border-radius: 20px;
 
+        .badge-card {
+          font-size: $small-size;
+        }
+
         .overlay-img-card {
           border-radius: 20px;
           overflow: hidden;
 
           img {
             object-fit: cover;
-            height: 220px;
+            height: 180px;
           }
         }
 
