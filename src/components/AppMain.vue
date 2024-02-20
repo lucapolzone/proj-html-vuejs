@@ -1,4 +1,7 @@
 <script>
+import AppCard from './AppCard.vue';
+
+
 
 export default {
   data() {
@@ -6,6 +9,8 @@ export default {
 
     }
   },
+
+  components: { AppCard }
 
 };
 </script>
@@ -17,34 +22,26 @@ export default {
 
         <div class="wrapper-title">
           <small>Our Services</small>
-          <h2 class="fw-bold">What We Do</h2>
+          <h2>What We Do</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
         <div class="row text-center">
 
           <div class="col-md-3">
-            <div class="card">
-              <p>CARD</p>
-            </div>
+            <app-card :imgPath="'/images/Group-247.png'" :title="'Data Analysis'" />
           </div>
 
           <div class="col-md-3">
-            <div class="card">
-              <p>CARD</p>
-            </div>
+            <app-card :imgPath="'/images/Group-567.png'" :title="'SEO Optimization'" />
           </div>
 
           <div class="col-md-3">
-            <div class="card">
-              <p>CARD</p>
-            </div>
+            <app-card :imgPath="'/images/Group-538.png'" :title="'Security Data'" />
           </div>
 
           <div class="col-md-3">
-            <div class="card">
-              <p>CARD</p>
-            </div>
+            <app-card :imgPath="'/images/Group-566.png'" :title="'Branding Strategy'" />
           </div>
 
         </div>
@@ -74,7 +71,7 @@ export default {
             <div class="wrapper">
 
               <small>Start Your Project</small>
-              <h2 class="text-start fw-bold mt-4">
+              <h2 class="text-start mt-4">
                 Grow Your Business <br>
                 <span class="fw-normal">
                   With Our Strategy
@@ -119,9 +116,8 @@ main {
     }
   }
 
-  section#our-services {
-    //
-  }
+  // section#our-services {
+  // }
 
   section#start-your-project {
 
@@ -147,7 +143,6 @@ main {
     }
 
   }
-
 
 }
 </style>

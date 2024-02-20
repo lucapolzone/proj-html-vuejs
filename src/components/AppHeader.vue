@@ -39,7 +39,7 @@ export default {
         <div class="col-md-5 d-flex align-items-center">
           <div class="wrapper">
 
-            <h1 class="text-start fw-bold">
+            <h1 class="text-start">
               Business Planning <br>
               <span class="fw-normal">
                 Digital Technology

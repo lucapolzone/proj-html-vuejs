@@ -3,7 +3,7 @@
 @use './partials/_mixins.scss' as *;
 
 // Import all of Bootstrap's CSS
-@import "bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
 
 // RESET
 
@@ -17,8 +17,18 @@ img {
   width: 100%;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 h2 {
   font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 ul {
@@ -57,9 +67,8 @@ a:hover {
   }
 }
 
-p {
-  font-size: 0.9rem;
-}
+
+
 
 // UTILS PROPS
 
