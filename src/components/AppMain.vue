@@ -93,47 +93,77 @@ export default {
           <h2>latest <span class="fw-normal">work</span></h2>
         </div>
 
-        <div class="container-carousel d-flex">
+        <div class="container carousel">
+          <div class="row">
 
-          <div class="wrapper-card">
-            <div class="img-card" id="img1">
+            <div class="col-md-3">
+              <div class="card ms-card">
+                <div class="img-card" id="img1">
+                </div>
+                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                  <small class="fw-bold">
+                    Caption 1
+                  </small>
+                  <small>
+                    Caption 2
+                  </small>
+                </div>
+              </div>
             </div>
-            <div class="caption-card d-flex align-items-center justify-content-around py-2">
-              <p class="fw-bold">
-                Questa è la caption 1
-              </p>
-              <p>
-                Questa è la caption 2
-              </p>
+
+            <div class="col-md-3">
+              <div class="card ms-card">
+                <div class="img-card" id="img2">
+                </div>
+                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                  <small class="fw-bold">
+                    Caption 1
+                  </small>
+                  <small>
+                    Caption 2
+                  </small>
+                </div>
+              </div>
             </div>
+
+            <div class="col-md-3">
+              <div class="card ms-card">
+                <div class="img-card" id="img3">
+                </div>
+                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                  <small class="fw-bold">
+                    Caption 1
+                  </small>
+                  <small>
+                    Caption 2
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card ms-card">
+                <div class="img-card" id="img4">
+                </div>
+                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                  <small class="fw-bold">
+                    Caption 1
+                  </small>
+                  <small>
+                    Caption 2
+                  </small>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="wrapper-card">
-            <div class="img-card" id="img2">
-            </div>
-            <div class="caption-card d-flex align-items-center justify-content-around py-2">
-              <p class="fw-bold">
-                Questa è la caption 1
-              </p>
-              <p>
-                Questa è la caption 2
-              </p>
-            </div>
+          <div class="text-center">
+            <i class="fa-solid fa-circle active"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
           </div>
-
-          <div class="wrapper-card">
-            <div class="img-card" id="img3">
-            </div>
-            <div class="caption-card d-flex align-items-center justify-content-around py-2">
-              <p class="fw-bold">
-                Questa è la caption 1
-              </p>
-              <p>
-                Questa è la caption 2
-              </p>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -191,34 +221,46 @@ main {
 
 
   section#portfolio {
-    .container-carousel {
-      overflow-x: auto;
+    .carousel {
+      // overflow-x: auto;
+      border: 2px solid red;
 
-      .wrapper-card {
-        background-color: #d8d8d8;
+      .ms-card {
         border-radius: 20px;
-        width: fit-content;
-        margin: 0 $medium-size;
 
         .img-card {
           border-radius: 20px;
-          width: 500px;
-          height: 400px;
+          height: 250px;
           background-size: cover;
 
           &#img1 {
-            background-image: url('/images/8wa60okr-1-790x576.jpg');
+            background-image: url('/images/84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg');
           }
 
           &#img2 {
-            background-image: url('/images/DRY-1-790x576.jpg');
+            background-image: url('/images/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg');
           }
 
           &#img3 {
-            background-image: url('/images/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg');
+            background-image: url('/images/8wa60okr-1-790x576.jpg');
+          }
+
+          &#img4 {
+            background-image: url('/images/DRY-1-790x576.jpg');
           }
         }
       }
+    }
+
+    .fa-solid.fa-circle {
+      font-size: $xsmall-size;
+      margin: 0 $xxsmall-size;
+      color: #e0e0e0;
+
+      &.active {
+        color: #F9636B;
+      }
+
     }
 
   }
