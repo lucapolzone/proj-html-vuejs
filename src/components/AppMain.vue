@@ -5,45 +5,23 @@ import AppCard from './AppCard.vue';
 export default {
   data() {
     return {
-      index: 0,
-      slides: [
-        {
-          imgPath: '/images/84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg',
-          badge1: 'Mock-up',
-          badge2: 'Digital Experience'
-        },
-        {
-          imgPath: '/images/8wa60okr-1-790x576.jpg',
-          badge1: 'Basket of Flower on table',
-          badge2: 'Branding Strategy'
-        },
-        {
-          imgPath: '/images/DRY-1-790x576.jpg',
-          badge1: 'Purinky Products',
-          badge2: 'Digital Experience'
-        },
-        {
-          imgPath: '/images/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
-          badge1: 'Satisfy Poster',
-          badge2: 'Branding Strategy'
-        },
-        {
-          imgPath: '/images/studio-republic-644339-unsplash-1380x703.jpg',
-          badge1: 'Office Poster',
-          badge2: 'Team Work'
-        }
-      ]
+      activeIndex: 0,
+      
 
     }
   },
 
   methods: {
-    
+    changeIndex(newIndex) {
+      this.activeIndex = newIndex;
+    }
+
 
   },
 
   props: {
     cards: Array,
+    slides: Array,
   },
 
   components: { AppCard }
@@ -130,7 +108,7 @@ export default {
           </div>
 
           <div class="carousel-arrows">
-            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-left" ></i>
             <i class="fa-solid fa-circle-arrow-right"></i>
           </div>
 
@@ -141,21 +119,22 @@ export default {
         <div class="container carousel">
           <div class="row">
 
-            <div v-for="slide in slides" class="col">
+            <div v-for="(, index) in slides" class="col">
               <div class="card ms-card">
                 <div class="overlay-img-card">
-                  <img :src="slide.imgPath" alt="">
+                  <img :src="slides[index].imgPath" alt="">
                 </div>
                 <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    {{ slide.badge1 }}
+                    {{ slides[index].badge1 }}
                   </small>
                   <small>
-                    {{ slide.badge2 }}
+                    {{ slides[index].badge2 }}
                   </small>
                 </div>
               </div>
             </div>
+
 
 
           </div>
@@ -239,8 +218,6 @@ main {
 
  
     .carousel {
-      // overflow-x: auto;
-      border: 2px solid red;
 
       .ms-card {
         border-radius: 20px;
