@@ -15,7 +15,29 @@ export default {
         contact: 'Contact',
         portfolio: 'Portfolio',
         sign: 'Sign in'
-      }
+      },
+      cards: [
+        {
+          imgPath: '/images/Group-247.png',
+          title: 'Data Analysis',
+          caption: 'When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper'
+        },
+        {
+          imgPath: '/images/Group-567.png',
+          title: 'SEO Optimization',
+          caption: 'When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper'
+        },
+        {
+          imgPath: '/images/Group-538.png',
+          title: 'Security Data',
+          caption: 'When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper'
+        },
+        {
+          imgPath: '/images/Group-566.png',
+          title: 'Branding Strategy',
+          caption: 'When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper'
+        }
+      ]
     }
   },
 
@@ -27,7 +49,7 @@ export default {
 
 <template>
   <app-header :navElements="navElements" />
-  <app-main />
+  <app-main :cards="cards" />
   <app-footer />
 </template>
 

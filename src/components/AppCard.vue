@@ -1,22 +1,19 @@
 <script>
 export default {
   props: {
-    imgPath: String,
-    title: String,
+    card: Object
   }
 
 }
 </script>
 <template>
-  <h2>
+  <div class="col-md-3">
+    <div class="card">
+      <img :src="card.imgPath" alt="">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.caption }}</p>
+    </div>
 
-  </h2>
-
-
-  <div class="card">
-    <img :src="imgPath" alt="">
-    <h3>{{ title }}</h3>
-    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -26,7 +23,8 @@ export default {
   display: inline-block;
   border: none;
   padding: 0 $medium-size;
-  margin: $xxlarge-size 0;
+  margin-top: $xlarge-size;
+  margin-bottom: $x3large-size;
 
 
   img {

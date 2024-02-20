@@ -2,12 +2,15 @@
 import AppCard from './AppCard.vue';
 
 
-
 export default {
   data() {
     return {
 
     }
+  },
+
+  props: {
+    cards: Array,
   },
 
   components: { AppCard }
@@ -23,26 +26,12 @@ export default {
         <div class="wrapper-title">
           <small>Our Services</small>
           <h2>What We Do</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <p>When, while the lovely valley teems with vapour around meand the</p>
         </div>
 
         <div class="row text-center">
 
-          <div class="col-md-3">
-            <app-card :imgPath="'/images/Group-247.png'" :title="'Data Analysis'" />
-          </div>
-
-          <div class="col-md-3">
-            <app-card :imgPath="'/images/Group-567.png'" :title="'SEO Optimization'" />
-          </div>
-
-          <div class="col-md-3">
-            <app-card :imgPath="'/images/Group-538.png'" :title="'Security Data'" />
-          </div>
-
-          <div class="col-md-3">
-            <app-card :imgPath="'/images/Group-566.png'" :title="'Branding Strategy'" />
-          </div>
+          <app-card v-for="card in cards" :card="card" />
 
         </div>
 
