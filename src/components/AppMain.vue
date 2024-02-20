@@ -5,6 +5,28 @@ import AppCard from './AppCard.vue';
 export default {
   data() {
     return {
+      carousel: [
+        {
+          imgPath: '/images/84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg',
+          badge1: 'Mock-up',
+          badge2: 'Digital Experience'
+        },
+        {
+          imgPath: '/images/8wa60okr-1-790x576.jpg',
+          badge1: 'Basket of Flower on table',
+          badge2: 'Branding Strategy'
+        },
+        {
+          imgPath: '/images/DRY-1-790x576.jpg',
+          badge1: 'Purinky Products',
+          badge2: 'Digital Experience'
+        },
+        {
+          imgPath: '/images/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+          badge1: 'Satisfy Poster',
+          badge2: 'Branding Strategy'
+        }
+      ]
 
     }
   },
@@ -93,19 +115,22 @@ export default {
           <h2>latest <span class="fw-normal">work</span></h2>
         </div>
 
+        <!-- ==== CAROUSEL ==== -->
+
         <div class="container carousel">
           <div class="row">
 
             <div class="col-md-3">
               <div class="card ms-card">
-                <div class="img-card" id="img1">
+                <div class="overlay-img-card">
+                  <img :src="carousel[0].imgPath" alt="">
                 </div>
-                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    Caption 1
+                    {{ carousel[0].badge1 }}
                   </small>
                   <small>
-                    Caption 2
+                    {{ carousel[0].badge2 }}
                   </small>
                 </div>
               </div>
@@ -113,14 +138,15 @@ export default {
 
             <div class="col-md-3">
               <div class="card ms-card">
-                <div class="img-card" id="img2">
+                <div class="overlay-img-card">
+                  <img :src="carousel[1].imgPath" alt="">
                 </div>
-                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    Caption 1
+                    {{ carousel[1].badge1 }}
                   </small>
                   <small>
-                    Caption 2
+                    {{ carousel[1].badge2 }}
                   </small>
                 </div>
               </div>
@@ -128,14 +154,15 @@ export default {
 
             <div class="col-md-3">
               <div class="card ms-card">
-                <div class="img-card" id="img3">
+                <div class="overlay-img-card">
+                  <img :src="carousel[2].imgPath" alt="">
                 </div>
-                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    Caption 1
+                    {{ carousel[2].badge1 }}
                   </small>
                   <small>
-                    Caption 2
+                    {{ carousel[2].badge2 }}
                   </small>
                 </div>
               </div>
@@ -143,18 +170,21 @@ export default {
 
             <div class="col-md-3">
               <div class="card ms-card">
-                <div class="img-card" id="img4">
+                <div class="overlay-img-card">
+                  <img :src="carousel[3].imgPath" alt="">
                 </div>
-                <div class="caption-card d-flex align-items-center justify-content-around py-2">
+                <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    Caption 1
+                    {{ carousel[3].badge1 }}
                   </small>
                   <small>
-                    Caption 2
+                    {{ carousel[3].badge2 }}
                   </small>
                 </div>
               </div>
             </div>
+
+
 
           </div>
 
@@ -228,27 +258,16 @@ main {
       .ms-card {
         border-radius: 20px;
 
-        .img-card {
+        .overlay-img-card {
           border-radius: 20px;
-          height: 250px;
-          background-size: cover;
+          overflow: hidden;
 
-          &#img1 {
-            background-image: url('/images/84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg');
-          }
-
-          &#img2 {
-            background-image: url('/images/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg');
-          }
-
-          &#img3 {
-            background-image: url('/images/8wa60okr-1-790x576.jpg');
-          }
-
-          &#img4 {
-            background-image: url('/images/DRY-1-790x576.jpg');
+          img {
+            object-fit: cover;
+            height: 220px;
           }
         }
+
       }
     }
 
