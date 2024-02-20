@@ -35,7 +35,7 @@ export default {
     <section id="our-services">
       <div class="container text-center">
 
-        <div class="wrapper-title text-center">
+        <div class="wrapper-title">
           <small>Our Services</small>
           <h2>What We Do</h2>
           <p>When, while the lovely valley teems with vapour around meand the</p>
@@ -116,30 +116,28 @@ export default {
 
         <!-- ==== CAROUSEL ==== -->
 
-        <div class="container carousel">
+        <div class="container carousel my-5">
           <div class="row">
 
-            <div v-for="(, index) in slides" class="col">
+            <div v-for="(slide, index) in slides" class="col">
               <div class="card ms-card">
                 <div class="overlay-img-card">
-                  <img :src="slides[index].imgPath" alt="">
+                  <img :src="slide.imgPath" alt="">
                 </div>
                 <div class="badge-card d-flex align-items-center justify-content-around py-2">
                   <small class="fw-bold">
-                    {{ slides[index].badge1 }}
+                    {{ slide.badge1 }}
                   </small>
                   <small>
-                    {{ slides[index].badge2 }}
+                    {{ slide.badge2 }}
                   </small>
                 </div>
               </div>
             </div>
 
-
-
           </div>
 
-          <div class="text-center">
+          <div class="text-center mt-3">
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle active"></i>
@@ -148,6 +146,101 @@ export default {
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <section id="price-list" class="text-center">
+      
+      <div class="wrapper-title">
+        <small>Price List</small>
+        <h2>Our Pricing</h2>
+        <p>When, while the lovely valley teems with vapour around meand the</p>
+      </div>
+
+      <div class="container my-5">
+          <div class="row gx-4">
+          <div class="col-md-4">
+
+            <div class="card rounded-4 p-5">
+              <h2>40</h2>
+
+              <h2>Designing</h2>
+              <small>PROCESS</small>
+              <small class="mt-3 dollar-symbol">$</small>
+              <h2>40</h2>
+              <small>Per Month</small>
+
+              <ul class="my-5">
+                <li><small><span class="fw-bold">Creative </span>Designed Enabled</small></li>
+                <li><small><span class="fw-bold">Vibrant </span>Color Usage</small></li>
+                <li><small><span class="fw-bold">Eye </span>Catching Design</small></li>
+                <li><small><span class="fw-bold">Extreme </span>Typography</small></li>
+                <li><small><span class="fw-bold">Exceptional </span>Design</small></li>
+              </ul>
+
+              <div>
+                <a href="#" class="btn btn-danger vertical">Order Now<i class="ms-5 fa-solid fa-arrow-right-long"></i></a>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            
+            <div class="card rounded-4 p-5">
+              <h2>60</h2>
+
+              <h2>Developing</h2>
+              <small>PRODUCT</small>
+              <small class="mt-3 dollar-symbol">$</small>
+              <h2>60</h2>
+              <small>Per Month</small>
+
+              <ul class="my-5">
+                <li><small><span class="fw-bold">Creative </span>Designed Enabled</small></li>
+                <li><small><span class="fw-bold">Vibrant </span>Color Usage</small></li>
+                <li><small><span class="fw-bold">Eye </span>Catching Design</small></li>
+                <li><small><span class="fw-bold">Extreme </span>Typography</small></li>
+                <li><small><span class="fw-bold">Exceptional </span>Design</small></li>
+              </ul>
+
+              <div>
+                <a href="#" class="btn btn-outline-danger">Order Now<i class="ms-5 fa-solid fa-arrow-right-long"></i></a>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            
+            <div class="card rounded-4 p-5">
+              <h2>80</h2>
+
+              <h2>Supporting</h2>
+              <small>CLIENTS</small>
+              <small class="mt-3 dollar-symbol">$</small>
+              <h2>80</h2>
+              <small>Per Month</small>
+
+              <ul class="my-5">
+                <li><small><span class="fw-bold">Creative </span>Designed Enabled</small></li>
+                <li><small><span class="fw-bold">Vibrant </span>Color Usage</small></li>
+                <li><small><span class="fw-bold">Eye </span>Catching Design</small></li>
+                <li><small><span class="fw-bold">Extreme </span>Typography</small></li>
+                <li><small><span class="fw-bold">Exceptional </span>Design</small></li>
+              </ul>
+
+              <div>
+                <a href="#" class="btn btn-danger vertical">Order Now<i class="ms-5 fa-solid fa-arrow-right-long"></i></a>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -167,6 +260,7 @@ main {
   }
 
   .wrapper-title {
+    text-align: center;
 
     small {
       color: #F9636B;
@@ -203,6 +297,7 @@ main {
 
 
   section#portfolio {
+
 
     .carousel-arrows {
       color: #F9636B;
@@ -250,6 +345,38 @@ main {
 
     }
 
+  }
+
+  section#price-list {
+    background-image: linear-gradient(to bottom, #0a1852 0, #01002f 50%, #fff 50%, #fff 100%);
+    .card {
+      position: relative;
+
+      .dollar-symbol {
+        margin-right: $xxlarge-size;
+      }
+
+      h2:first-of-type {
+        font-size: 15rem;
+        position: absolute;
+        top: -75px;
+        right: -10px;
+        opacity: .1;
+      }
+      
+      h2:last-of-type {
+      font-size: $xxlarge-size;
+      line-height: 4.2rem;
+      }
+    }
+
+    .container .col-md-4:nth-of-type(even) .card {
+      background-image: linear-gradient(to bottom, #B6246E 0, #F9636B 100%);
+      color: white;
+        .btn {
+          background-color: #fff;
+        }
+    }
   }
 
 
