@@ -64,6 +64,50 @@ export default {
           badge1: 'Office Poster',
           badge2: 'Team Work'
         }
+      ],
+      footerElements: [
+        {
+          companyCard: {
+            imgPath: '/images/white-logo-2.png',
+            caption: 'When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper'
+          }
+        },
+        {
+          quickLinks: {
+            link1: 'Services',
+            link2: 'Contact',
+            link3: 'Blog'
+          }
+        },
+        {
+          resources: {
+            link1: 'Art Design',
+            link2: 'Computer',
+            link3: 'IT News',
+            link4: 'Networking',
+            link5: 'Web Security'
+          }
+        },
+        {
+          contactUs: {
+            address: 'Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, Tx 76051',
+            phone: '+99 (0) 101 0000 888',
+            email: 'Info©yourdomain.com'
+          }
+        },
+        {
+          bottomSection: {
+            copyright: '© 2020 Phlox. All Rights Reserved',
+            socials: [
+              {
+                instagram: 'fa-brands fa-instagram',
+                linkedin: 'fa-brands fa-linkedin-in',
+                facebook: 'fa-brands fa-facebook-f',
+                twitter: 'fa-brands fa-twitter',
+              }
+            ]
+          }
+        }
       ]
     }
   },
@@ -77,7 +121,7 @@ export default {
 <template>
   <app-header :navElements="navElements" />
   <app-main :cards="cards" :slides="slides" />
-  <app-footer />
+  <app-footer :footerElements="footerElements" />
 </template>
 
 <style lang="scss">

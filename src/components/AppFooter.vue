@@ -1,13 +1,10 @@
 <script>
-
 export default {
-  data() {
-    return {
+  props: {
+    footerElements: Array
+  }
 
-    }
-  },
-
-};
+}
 </script>
 <template>
   <footer>
@@ -19,12 +16,12 @@ export default {
             <div class="card">
               <ul>
                 <li class="mb-3">
-                  <img src="/images/white-logo-2.png" alt="">
+                  <img :src="footerElements[0].companyCard.imgPath" alt="">
                 </li>
               </ul>
               <div class="caption">
                 <p>
-                  When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper
+                  {{ footerElements[0].companyCard.caption }}
                 </p>
               </div>
             </div>
@@ -35,13 +32,19 @@ export default {
               <h5>Quick Links</h5>
               <div class="caption">
                 <a href="#">
-                  <p>Services</p>
+                  <p>
+                    {{ footerElements[1].quickLinks.link1 }}
+                  </p>
                 </a>
                 <a href="#">
-                  <p>Contact</p>
+                  <p>
+                    {{ footerElements[1].quickLinks.link2 }}
+                  </p>
                 </a>
                 <a href="#">
-                  <p>Blog</p>
+                  <p>
+                    {{ footerElements[1].quickLinks.link3 }}
+                  </p>
                 </a>
               </div>
             </div>
@@ -52,19 +55,29 @@ export default {
               <h5>Resources</h5>
               <div class="caption">
                 <a href="#">
-                  <p>Art Design</p>
+                  <p>
+                    {{ footerElements[2].resources.link1 }}
+                  </p>
                 </a>
                 <a href="#">
-                  <p>Computer</p>
+                  <p>
+                    {{ footerElements[2].resources.link2 }}
+                  </p>
                 </a>
                 <a href="#">
-                  <p>IT News</p>
+                  <p>
+                    {{ footerElements[2].resources.link3 }}
+                  </p>
                 </a>
                 <a href="#">
-                  <p>Networking</p>
+                  <p>
+                    {{ footerElements[2].resources.link4 }}
+                  </p>
                 </a>
                 <a href="#">
-                  <p>Web Security</p>
+                  <p>
+                    {{ footerElements[2].resources.link5 }}
+                  </p>
                 </a>
               </div>
             </div>
@@ -74,9 +87,15 @@ export default {
             <div class="card">
               <h5>Contact Us</h5>
               <div class="caption">
-                <p><span>Address: </span>Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, Tx 76051</p>
-                <p><span>Phone: </span>+99 (0) 101 0000 888</p>
-                <p><span>Email: </span>Info©yourdomain.com</p>
+                <p><span>Address: </span>
+                  {{ footerElements[3].contactUs.address }}
+                </p>
+                <p><span>Phone: </span>
+                  {{ footerElements[3].contactUs.phone }}
+                </p>
+                <p><span>Email: </span>
+                  {{ footerElements[3].contactUs.email }}
+                </p>
               </div>
             </div>
           </div>
@@ -87,27 +106,29 @@ export default {
 
     <div id="bottom-section" class="py-4">
       <div class="container d-flex justify-content-between">
-        <p class="caption">© 2020 Phlox. All Rights Reserved</p>
+        <p class="caption">
+          {{ footerElements[4].bottomSection.copyright }}
+        </p>
 
         <ul class="d-flex">
           <li>
             <a href="#">
-              <i class="fa-brands fa-instagram"></i>
+              <i :class="footerElements[4].bottomSection.socials[0].instagram"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i :class="footerElements[4].bottomSection.socials[0].linkedin"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa-brands fa-facebook-f"></i>
+              <i :class="footerElements[4].bottomSection.socials[0].facebook"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa-brands fa-twitter"></i>
+              <i :class="footerElements[4].bottomSection.socials[0].twitter"></i>
             </a>
           </li>
         </ul>
