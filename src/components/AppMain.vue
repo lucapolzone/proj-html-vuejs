@@ -294,7 +294,7 @@ export default {
       <div class="wrapper-box">
         <div class="row">
 
-          <div class="col-md-7">
+          <div class="col-md-7 pe-4">
             <h2>We offer Awesome Services</h2>
             <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surfaces.
             </p>
