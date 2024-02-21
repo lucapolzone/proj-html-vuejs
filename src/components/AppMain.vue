@@ -365,8 +365,49 @@ export default {
         </div>
       </div>
 
+
+
+      <div class="container text-center" id="brands">
+        <div class="row">
+
+          <div class="col">
+            <div class="card">
+              <img src="/images/client-1-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img src="/images/clienty-2.png" alt="">
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img src="/images/clienty-4.png" alt="">
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img src="/images/client-5.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="/images/clienty-3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
     </section>
 
+
+    <!-- === ORANGE BOX === -->
     <div class="container">
 
       <div class="wrapper-box">
@@ -566,6 +607,7 @@ main {
     .col {
       text-align: center;
       padding: 0 $medium-size;
+      // border: 2px solid red;
 
       .card {
         margin-top: $xxlarge-size;
@@ -589,6 +631,20 @@ main {
 
     }
 
+
+    #brands {
+      margin-top: $large-size;
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
   }
 
 }
