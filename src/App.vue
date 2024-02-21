@@ -7,7 +7,7 @@ export default {
   data() {
     return {
       navElements: {
-        src: '/images/white-logo-2.png',
+        imgPath: '/images/white-logo-2.png',
         home: 'Home',
         about: 'About',
         services: 'Services',

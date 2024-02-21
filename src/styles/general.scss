@@ -31,6 +31,17 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
 ul {
   padding-left: 0;
   margin-bottom: 0;
@@ -60,10 +71,10 @@ a:hover {
 
   &.btn-danger {
     background-image: linear-gradient(to right, #B6246E 0, #F9636B 100%);
-  }
 
-  &.btn-danger.vertical {
-    background-image: linear-gradient(to bottom, #B6246E 0, #F9636B 100%);
+    &.vertical {
+      background-image: linear-gradient(to bottom, #B6246E 0, #F9636B 100%);
+    }
   }
 
   &:hover {
@@ -79,7 +90,7 @@ p {
 // UTILS PROPS
 
 section:nth-of-type(even) {
-  @include bluegradient
+  @include bluegradient;
 }
 
 

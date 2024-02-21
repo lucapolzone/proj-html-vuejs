@@ -15,7 +15,7 @@ export default {
       <nav class="d-flex justify-content-between align-items-center mb-4">
         <!-- LOGO -->
         <a href="#">
-          <img :src="navElements.src" alt="img-logo">
+          <img :src="navElements.imgPath" alt="img-logo">
         </a>
 
         <ul class="d-flex align-items-center">

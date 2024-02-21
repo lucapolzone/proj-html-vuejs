@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       activeIndex: 0,
-      
+
 
     }
   },
@@ -108,7 +108,7 @@ export default {
           </div>
 
           <div class="carousel-arrows">
-            <i class="fa-solid fa-circle-arrow-left" ></i>
+            <i class="fa-solid fa-circle-arrow-left"></i>
             <i class="fa-solid fa-circle-arrow-right"></i>
           </div>
 
@@ -120,8 +120,8 @@ export default {
           <div class="row">
 
             <div v-for="(slide, index) in slides" class="col">
-              <div class="card ms-card">
-                <div class="overlay-img-card">
+              <div class="card ms-card rounded-4">
+                <div class="overlay-img-card rounded-4">
                   <img :src="slide.imgPath" alt="">
                 </div>
                 <div class="badge-card d-flex align-items-center justify-content-around py-2">
@@ -150,15 +150,15 @@ export default {
     </section>
 
     <section id="price-list" class="text-center">
-      
+
       <div class="wrapper-title">
         <small>Price List</small>
         <h2>Our Pricing</h2>
-        <p>When, while the lovely valley teems with vapour around meand the</p>
+        <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
       </div>
 
       <div class="container my-5">
-          <div class="row gx-4">
+        <div class="row gx-4">
           <div class="col-md-4">
 
             <div class="card rounded-4 p-5">
@@ -187,7 +187,7 @@ export default {
 
           </div>
           <div class="col-md-4">
-            
+
             <div class="card rounded-4 p-5">
               <h2>60</h2>
 
@@ -214,7 +214,7 @@ export default {
 
           </div>
           <div class="col-md-4">
-            
+
             <div class="card rounded-4 p-5">
               <h2>80</h2>
 
@@ -244,6 +244,50 @@ export default {
       </div>
     </section>
 
+    <!-- SECTION BLOG -->
+    <section id="blog">
+      <div class="wrapper-title">
+        <small>Blog</small>
+        <h2>Latest <span class="fw-normal">Posts</span></h2>
+        <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card rounded-4">
+              <div class="overlay-img-card rounded-4 d-flex align-items-end">
+
+                <div class="wrapper-caption position-absolute d-flex align-items-end justify-content-between">
+                  <div>
+                    <small>April 21, 2019 • by Paul</small>
+                    <h4>Amazon get CCI nod to acquire 49% stake in</h4>
+                    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+                  </div>
+
+                  <a href="#" class="btn btn-outline-secondary">Read More</a>
+                </div>
+
+                <img src="/images/headway-537308-unsplash-1380x703.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              CARD
+
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              CARD
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
   </main>
 </template>
@@ -255,12 +299,19 @@ export default {
 
 main {
 
+  .overlay-img-card {
+    overflow: hidden;
+  }
+
+
   section {
     padding: $large-size 0;
   }
 
   .wrapper-title {
     text-align: center;
+    max-width: 550px;
+    margin: 0 auto;
 
     small {
       color: #F9636B;
@@ -305,30 +356,25 @@ main {
       .fa-solid {
         font-size: $medium-size;
       }
+
       .fa-solid.fa-circle-arrow-left {
         margin-right: 1rem;
       }
 
     }
 
- 
+
     .carousel {
 
       .ms-card {
-        border-radius: 20px;
 
         .badge-card {
           font-size: $small-size;
         }
 
-        .overlay-img-card {
-          border-radius: 20px;
-          overflow: hidden;
-
-          img {
-            object-fit: cover;
-            height: 180px;
-          }
+        img {
+          object-fit: cover;
+          height: 180px;
         }
 
       }
@@ -349,6 +395,7 @@ main {
 
   section#price-list {
     background-image: linear-gradient(to bottom, #0a1852 0, #01002f 50%, #fff 50%, #fff 100%);
+
     .card {
       position: relative;
 
@@ -363,22 +410,35 @@ main {
         right: -10px;
         opacity: .1;
       }
-      
+
       h2:last-of-type {
-      font-size: $xxlarge-size;
-      line-height: 4.2rem;
+        font-size: $xxlarge-size;
+        line-height: 4.2rem;
       }
     }
 
     .container .col-md-4:nth-of-type(even) .card {
       background-image: linear-gradient(to bottom, #B6246E 0, #F9636B 100%);
       color: white;
-        .btn {
-          background-color: #fff;
-        }
+
+      .btn {
+        background-color: #fff;
+      }
     }
   }
 
+  section#blog {
+    .wrapper-caption {
+      padding: $small-size;
+      color: white;
 
-}
-</style>
+
+
+      a.btn {
+        min-width: 120px;
+        background-color: #fff;
+      }
+    }
+
+  }
+}</style>
