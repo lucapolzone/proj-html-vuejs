@@ -8,7 +8,7 @@ export default {
 };
 </script>
 <template>
-  <header>
+  <header id="header">
     <div class="container">
 
       <!-- NAV -->

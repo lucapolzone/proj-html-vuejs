@@ -103,7 +103,7 @@ export default {
 
         <div class="wrapper-top-content d-flex justify-content-between align-items-end">
           <div>
-            <small>Portfolio</small>
+            <small id="label">Portfolio</small>
             <h2>latest <span class="fw-normal">work</span></h2>
           </div>
 
@@ -467,6 +467,7 @@ main {
     padding: $xlarge-size $large-size;
     color: white;
     position: relative;
+    z-index: 1;
     top: $x3large-size;
 
     .wrapper-input {
@@ -540,6 +541,11 @@ main {
 
   section#portfolio {
 
+    padding: $xxlarge-size 0;
+
+    #label {
+      color: #F9636B;
+    }
 
     .carousel-arrows {
       color: #F9636B;
@@ -586,6 +592,10 @@ main {
 
   section#price-list {
     background-image: linear-gradient(to bottom, #0a1852 0, #01002f 50%, #fff 50%, #fff 100%);
+
+    .btn.btn-outline-danger:hover {
+      color: lightcoral;
+    }
 
     .card {
       position: relative;

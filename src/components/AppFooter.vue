@@ -13,6 +13,17 @@ export default {
 </script>
 <template>
   <footer>
+    <div id="widget" class="d-flex justify-content-between p-3">
+      <div>
+        <a href="#header">
+          <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+      </div>
+      <div>
+        <i class="fa-solid fa-comment-dots"></i>
+      </div>
+    </div>
+
     <div id="top-section" class="pb-5">
       <div class="container">
         <div class="row">
@@ -165,6 +176,15 @@ export default {
 footer {
   @include bluegradient;
   padding-top: 10rem;
+  position: relative;
+
+  #widget {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    font-size: $medium-size;
+  }
 
   #top-section {
     border-bottom: 1px solid rgba(129, 130, 154, 0.5);
