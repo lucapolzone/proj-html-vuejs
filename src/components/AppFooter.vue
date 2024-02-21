@@ -1,7 +1,12 @@
 <script>
 export default {
   props: {
-    footerElements: Array
+    companyCard: Object,
+    quickLinks: Object,
+    resources: Object,
+    contactUs: Object,
+    copyright: String,
+    socials: Object
   }
 
 }
@@ -16,12 +21,12 @@ export default {
             <div class="card">
               <ul>
                 <li class="mb-3">
-                  <img :src="footerElements[0].companyCard.imgPath" alt="">
+                  <img :src="companyCard.imgPath" alt="">
                 </li>
               </ul>
               <div class="caption">
                 <p>
-                  {{ footerElements[0].companyCard.caption }}
+                  {{ companyCard.caption }}
                 </p>
               </div>
             </div>
@@ -33,17 +38,17 @@ export default {
               <div class="caption">
                 <a href="#">
                   <p>
-                    {{ footerElements[1].quickLinks.link1 }}
+                    {{ quickLinks.link1 }}
                   </p>
                 </a>
                 <a href="#">
                   <p>
-                    {{ footerElements[1].quickLinks.link2 }}
+                    {{ quickLinks.link2 }}
                   </p>
                 </a>
                 <a href="#">
                   <p>
-                    {{ footerElements[1].quickLinks.link3 }}
+                    {{ quickLinks.link3 }}
                   </p>
                 </a>
               </div>
@@ -56,27 +61,27 @@ export default {
               <div class="caption">
                 <a href="#">
                   <p>
-                    {{ footerElements[2].resources.link1 }}
+                    {{ resources.link1 }}
                   </p>
                 </a>
                 <a href="#">
                   <p>
-                    {{ footerElements[2].resources.link2 }}
+                    {{ resources.link2 }}
                   </p>
                 </a>
                 <a href="#">
                   <p>
-                    {{ footerElements[2].resources.link3 }}
+                    {{ resources.link3 }}
                   </p>
                 </a>
                 <a href="#">
                   <p>
-                    {{ footerElements[2].resources.link4 }}
+                    {{ resources.link4 }}
                   </p>
                 </a>
                 <a href="#">
                   <p>
-                    {{ footerElements[2].resources.link5 }}
+                    {{ resources.link5 }}
                   </p>
                 </a>
               </div>
@@ -88,13 +93,13 @@ export default {
               <h5>Contact Us</h5>
               <div class="caption">
                 <p><span>Address: </span>
-                  {{ footerElements[3].contactUs.address }}
+                  {{ contactUs.address }}
                 </p>
                 <p><span>Phone: </span>
-                  {{ footerElements[3].contactUs.phone }}
+                  {{ contactUs.phone }}
                 </p>
                 <p><span>Email: </span>
-                  {{ footerElements[3].contactUs.email }}
+                  {{ contactUs.email }}
                 </p>
               </div>
             </div>
@@ -107,28 +112,28 @@ export default {
     <div id="bottom-section" class="py-4">
       <div class="container d-flex justify-content-between">
         <p class="caption">
-          {{ footerElements[4].bottomSection.copyright }}
+          {{ copyright }}
         </p>
 
         <ul class="d-flex">
           <li>
             <a href="#">
-              <i :class="footerElements[4].bottomSection.socials[0].instagram"></i>
+              <i :class="socials.instagram"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i :class="footerElements[4].bottomSection.socials[0].linkedin"></i>
+              <i :class="socials.linkedin"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i :class="footerElements[4].bottomSection.socials[0].facebook"></i>
+              <i :class="socials.facebook"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i :class="footerElements[4].bottomSection.socials[0].twitter"></i>
+              <i :class="socials.twitter"></i>
             </a>
           </li>
         </ul>

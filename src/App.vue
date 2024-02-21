@@ -98,14 +98,13 @@ export default {
         {
           bottomSection: {
             copyright: '© 2020 Phlox. All Rights Reserved',
-            socials: [
+            socials: 
               {
                 instagram: 'fa-brands fa-instagram',
                 linkedin: 'fa-brands fa-linkedin-in',
                 facebook: 'fa-brands fa-facebook-f',
                 twitter: 'fa-brands fa-twitter',
               }
-            ]
           }
         }
       ]
@@ -121,7 +120,14 @@ export default {
 <template>
   <app-header :navElements="navElements" />
   <app-main :cards="cards" :slides="slides" />
-  <app-footer :footerElements="footerElements" />
+  <app-footer 
+  :companyCard="footerElements[0].companyCard" 
+  :quickLinks="footerElements[1].quickLinks" 
+  :resources="footerElements[2].resources" 
+  :contactUs="footerElements[3].contactUs" 
+  :copyright="footerElements[4].bottomSection.copyright" 
+  :socials="footerElements[4].bottomSection.socials" 
+  />
 </template>
 
 <style lang="scss">
