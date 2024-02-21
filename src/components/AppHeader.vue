@@ -116,6 +116,19 @@ header {
     img {
       max-width: 600px;
     }
+
+
+    a.btn {
+      border: none;
+    }
+
+    a.btn.btn-danger:hover {
+      background-image: linear-gradient(to right, #03A7D3E6 0, #1d3e82 100%);
+    }
+
+    a.btn.btn-primary:hover {
+      background-image: linear-gradient(to right, #B6246E 0, #F9636B 100%);
+    }
   }
 
 }
