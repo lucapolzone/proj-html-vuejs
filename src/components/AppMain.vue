@@ -289,8 +289,27 @@ export default {
 
     </section>
 
-    <div>
-      BOX
+    <div class="container">
+
+      <div class="wrapper-box">
+        <div class="row">
+
+          <div class="col-md-7">
+            <h2>We offer Awesome Services</h2>
+            <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surfaces.
+            </p>
+          </div>
+
+          <div class="col-md-5 text-end d-flex align-items-center">
+            <div class="wrapper-input flex-grow-1 d-flex mx-3">
+              <input type="text" class="flex-grow-1 border-0 me-2" placeholder="Enter Your Email Address"><button
+                class="btn btn-primary">SUBSCRIBE</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -301,6 +320,22 @@ export default {
 
 
 main {
+  .wrapper-box {
+    @include redgradient-horizontal;
+    border-radius: 20px;
+    width: 100%;
+    padding: $xlarge-size $large-size;
+    color: white;
+    position: relative;
+    bottom: -$x3large-size;
+
+    .wrapper-input {
+      background-color: white;
+      border-radius: 20px;
+      padding: $small-size;
+    }
+
+  }
 
   .overlay-img-card {
     overflow: hidden;
@@ -421,7 +456,7 @@ main {
     }
 
     .container .col-md-4:nth-of-type(even) .card {
-      background-image: linear-gradient(to bottom, #B6246E 0, #F9636B 100%);
+      @include redgradient-vertical;
       color: white;
 
       .btn {

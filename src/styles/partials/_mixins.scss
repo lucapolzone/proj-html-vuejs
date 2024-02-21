@@ -6,6 +6,16 @@
   color: white;
 }
 
+@mixin redgradient-vertical {
+  background-image: linear-gradient(to bottom, #B6246E 0, #F9636B 100%);
+}
+
+@mixin redgradient-horizontal {
+  background-image: linear-gradient(to right, #B6246E 0, #F9636B 100%);
+}
+
+
+
 
 @mixin caption {
   margin: $medium-size 0;

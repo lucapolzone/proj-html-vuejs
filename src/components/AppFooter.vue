@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
   <footer>
-    <div id="top-section" class="py-5">
+    <div id="top-section" class="pb-5">
       <div class="container">
         <div class="row">
 
@@ -138,7 +138,7 @@ export default {
 
 footer {
   @include bluegradient;
-  // padding: $xlarge-size 0;
+  padding-top: 10rem;
 
   #top-section {
     border-bottom: 1px solid rgba(129, 130, 154, 0.5);
