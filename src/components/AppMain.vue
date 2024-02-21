@@ -641,7 +641,8 @@ main {
         justify-content: center;
 
         img {
-          width: 70%;
+          max-width: 120px;
+          min-width: 80px;
         }
       }
     }
