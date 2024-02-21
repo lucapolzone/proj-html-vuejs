@@ -289,6 +289,9 @@ export default {
 
     </section>
 
+    <div>
+      BOX
+    </div>
   </main>
 </template>
 
@@ -441,4 +444,6 @@ main {
     }
 
   }
-}</style>
+
+}
+</style>
