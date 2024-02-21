@@ -252,36 +252,57 @@ export default {
         <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
       </div>
 
-      <div class="container">
+      <div class="container py-5">
         <div class="row">
           <div class="col-md-6">
+
             <div class="card rounded-4">
               <div class="overlay-img-card rounded-4 d-flex align-items-end">
 
                 <div class="wrapper-caption position-absolute d-flex align-items-end justify-content-between">
                   <div>
                     <small>April 21, 2019 • by Paul</small>
-                    <h4>Amazon get CCI nod to acquire 49% stake in</h4>
+                    <h5 class="mt-2">Amazon get CCI nod to acquire 49% stake in</h5>
                     <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
                   </div>
-
                   <a href="#" class="btn btn-outline-secondary">Read More</a>
                 </div>
 
                 <img src="/images/headway-537308-unsplash-1380x703.jpg" alt="">
               </div>
             </div>
+
           </div>
           <div class="col-md-3">
-            <div class="card rounded-4">
-              CARD
+            <div class="card rounded-4 p-3 justify-content-end">
+              <div class="d-flex flex-column justify-content-start h-100 pt-3">
+                <small>April 21, 2019 • by Paul</small>
+                <h5 class="mt-2">Clearing Corporations get SEBI nod to invest in overnight funds </h5>
+                <p class="mb-2">When, while the lovely valley teems with vapour around meand the meridian sun strikes the
+                  upper</p>
+              </div>
 
+              <div class="text-start">
+                <a href="#" class="btn btn-outline-secondary">Read More</a>
+              </div>
             </div>
           </div>
+
           <div class="col-md-3">
             <div class="card rounded-4">
-              CARD
+              <div class="card rounded-4 p-3 justify-content-end">
+                <div class="d-flex flex-column justify-content-start h-100 pt-3">
+                  <small>April 21, 2019 • by Paul</small>
+                  <h5 class="mt-2">Shabnam Dhillion, wife of RSSB chief Gurinder Dhillon, passes away in London</h5>
+                  <p class="mb-2">When, while the lovely valley teems with vapour around meand the meridian sun strikes
+                    the
+                    upper</p>
+                </div>
 
+                <div class="text-start">
+                  <a href="#" class="btn btn-outline-secondary">Read More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -291,7 +312,7 @@ export default {
 
     <!-- SECTION TESTIMONIAL -->
     <section id="testimonial">
-      <div class="wrapper-title">
+      <div class="wrapper-title pt-5">
         <small>Testimonial</small>
         <h2>What <span class="fw-normal">People Say</span></h2>
         <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
@@ -585,18 +606,46 @@ main {
   }
 
   section#blog {
-    .wrapper-caption {
-      padding: $small-size;
+
+    .overlay-img-card {
+      height: 100%;
+    }
+
+    .col-md-3 .card {
+      background-image: linear-gradient(to top left, #0a1852 0, #01002f 100%);
       color: white;
+    }
 
-
+    .card {
+      height: 110%;
 
       a.btn {
         min-width: 120px;
         background-color: #fff;
+
+        &:hover {
+          filter: brightness(.7);
+          color: black;
+        }
+      }
+
+
+
+      .wrapper-caption {
+        padding: $small-size $medium-size;
+        color: white;
+        position: relative;
+        z-index: 1;
+
       }
     }
 
+    img {
+      filter: brightness(.5);
+      position: relative;
+      z-index: 0;
+      height: 100%;
+    }
   }
 
   section#testimonial {
