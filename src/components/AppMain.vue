@@ -289,6 +289,84 @@ export default {
 
     </section>
 
+    <!-- SECTION TESTIMONIAL -->
+    <section id="testimonial">
+      <div class="wrapper-title">
+        <small>Testimonial</small>
+        <h2>What <span class="fw-normal">People Say</span></h2>
+        <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+
+          <div class="col">
+            <div class="card">
+              <div class="d-flex justify-content-center mb-4">
+                <div class="overlay-image">
+                  <img src="/images/szabo-viktor-1266895-unsplash-1024x1024.png" alt="">
+                </div>
+              </div>
+              <div class="wrapper-stars d-inline text-center">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="my-4">When, while the lovely valley teems with vapour around meand the meridian sun strikes the
+                upper</p>
+              <p class="fw-bold">Mickel Anegl</p>
+              <p>Marketing Management</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="d-flex justify-content-center mb-4">
+                <div class="overlay-image">
+                  <img src="/images/philipe-cavalcante-539505-unsplash-1024x1024.png" alt="">
+                </div>
+              </div>
+              <div class="wrapper-stars d-inline text-center">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="my-4">When, while the lovely valley teems with vapour around meand the meridian sun strikes the
+                upper</p>
+              <p class="fw-bold">Mickel Anegl</p>
+              <p>Marketing Management</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="d-flex justify-content-center mb-4">
+                <div class="overlay-image">
+                  <img src="/images/fabio-spinelli-695744-unsplash-1024x1024.png" alt="">
+                </div>
+              </div>
+              <div class="wrapper-stars d-inline text-center">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="my-4">When, while the lovely valley teems with vapour around meand the meridian sun strikes the
+                upper</p>
+              <p class="fw-bold">Mickel Anegl</p>
+              <p>Marketing Management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     <div class="container">
 
       <div class="wrapper-box">
@@ -476,6 +554,39 @@ main {
         min-width: 120px;
         background-color: #fff;
       }
+    }
+
+  }
+
+  section#testimonial {
+    background-image: linear-gradient(to bottom, #FFF 0, #FFF 100%);
+    color: black;
+
+
+    .col {
+      text-align: center;
+      padding: 0 $medium-size;
+
+      .card {
+        margin-top: $xxlarge-size;
+        border: none;
+
+        .overlay-image {
+          border: 7px solid #B6246E;
+          width: 150px;
+          border-radius: 50%;
+
+          img {
+            transform: scale(1.04);
+          }
+        }
+
+        .wrapper-stars {
+          color: #B6246E;
+        }
+
+      }
+
     }
 
   }
