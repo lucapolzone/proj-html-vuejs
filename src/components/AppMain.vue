@@ -327,7 +327,7 @@ main {
     padding: $xlarge-size $large-size;
     color: white;
     position: relative;
-    bottom: -$x3large-size;
+    top: $x3large-size;
 
     .wrapper-input {
       background-color: white;
